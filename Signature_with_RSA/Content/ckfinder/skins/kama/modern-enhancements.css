@@ -1,0 +1,339 @@
+/*
+CKFinder Kama Skin - Modern Enhancements
+Cải thiện giao diện Kama có sẵn với styles hiện đại
+File này sẽ override và cải thiện các styles của Kama
+*/
+
+/* =========================
+   MODERN ENHANCEMENTS
+   ========================= */
+
+/* Font hiện đại hơn */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 13px !important;
+}
+
+/* Background tốt hơn */
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+/* Container với shadow đẹp hơn */
+#ckfinder {
+  border-radius: 12px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
+  background: #f8f9fa !important;
+}
+
+/* Toolbar hiện đại */
+#toolbar_view {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%) !important;
+  border-bottom: 1px solid #e1e8ed !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+.cke_skin_kama .cke_toolgroup {
+  background: #ffffff !important;
+  border: 1px solid #e1e8ed !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.2s ease !important;
+}
+
+.cke_skin_kama .cke_toolgroup:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Buttons hiện đại */
+.cke_skin_kama .cke_button a {
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.cke_skin_kama .cke_button a:hover.cke_off {
+  background: linear-gradient(180deg, #f0f7ff 0%, #e6f2ff 100%) !important;
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.1) !important;
+}
+
+.cke_skin_kama .cke_button a.cke_on {
+  background: linear-gradient(180deg, #667eea 0%, #5568d3 100%) !important;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3) !important;
+}
+
+/* Sidebar */
+#sidebar_container {
+  background: #ffffff !important;
+  border-right: 1px solid #e1e8ed !important;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Folder tree */
+#folders_view {
+  background: #ffffff !important;
+  padding: 12px 8px !important;
+}
+
+#folders_view .folder_tree li a {
+  border-radius: 8px !important;
+  margin: 2px 0 !important;
+  padding: 8px 12px 8px 32px !important;
+  transition: all 0.2s ease !important;
+}
+
+#folders_view .folder_tree li a:hover {
+  background-color: #f0f7ff !important;
+  color: #667eea !important;
+  transform: translateX(2px);
+}
+
+#folders_view .folder_tree_wrapper .selection {
+  background: linear-gradient(
+    90deg,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(102, 126, 234, 0.05) 100%
+  ) !important;
+  border-left: 3px solid #667eea !important;
+  border-radius: 0 8px 8px 0 !important;
+}
+
+/* Files view */
+#files_view {
+  background: #f8f9fa !important;
+  padding: 16px !important;
+  border-radius: 8px !important;
+}
+
+#files_view .files_thumbnails .file_entry {
+  background: #ffffff !important;
+  border: 1px solid #e1e8ed !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  margin: 12px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+#files_view .files_thumbnails .file_entry:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.15) !important;
+  border-color: #667eea !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%) !important;
+}
+
+#files_view .files_thumbnails .file_entry.selected {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border-color: #667eea !important;
+  color: white !important;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3) !important;
+}
+
+#files_view .files_thumbnails .file_entry.selected h5,
+#files_view .files_thumbnails .file_entry.selected .details span {
+  color: white !important;
+}
+
+/* Status bar */
+#status_view {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%) !important;
+  border-top: 1px solid #e1e8ed !important;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Dialog */
+.cke_skin_kama .cke_dialog_body {
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2) !important;
+}
+
+.cke_skin_kama .cke_dialog_title {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  padding: 16px 20px !important;
+  font-size: 16px !important;
+  border-radius: 12px 12px 0 0 !important;
+  border: none !important;
+}
+
+.cke_skin_kama .cke_dialog_contents {
+  background: #f8f9fa !important;
+  border-radius: 0 !important;
+}
+
+.cke_skin_kama .cke_dialog_footer {
+  background: #ffffff !important;
+  border-top: 1px solid #e1e8ed !important;
+  border-radius: 0 0 12px 12px !important;
+}
+
+/* Input fields */
+.cke_skin_kama input.cke_dialog_ui_input_text,
+.cke_skin_kama input.cke_dialog_ui_input_password,
+.cke_skin_kama textarea.cke_dialog_ui_input_textarea {
+  border: 2px solid #e1e8ed !important;
+  border-radius: 8px !important;
+  padding: 10px 12px !important;
+  transition: all 0.2s ease !important;
+}
+
+.cke_skin_kama input.cke_dialog_ui_input_text:focus,
+.cke_skin_kama input.cke_dialog_ui_input_password:focus,
+.cke_skin_kama textarea.cke_dialog_ui_input_textarea:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+  outline: none !important;
+}
+
+/* Dialog buttons */
+.cke_skin_kama a.cke_dialog_ui_button {
+  background: linear-gradient(180deg, #667eea 0%, #5568d3 100%) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 10px 24px !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2) !important;
+}
+
+.cke_skin_kama a.cke_dialog_ui_button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3) !important;
+}
+
+/* Progress bar */
+.ckf_progress_bar_container {
+  background: #e1e8ed !important;
+  border: none !important;
+  border-radius: 10px !important;
+  height: 8px !important;
+}
+
+.ckf_progress_bar_container div {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
+  height: 8px !important;
+  border-radius: 10px !important;
+}
+
+/* Scrollbar cho webkit */
+#files_view::-webkit-scrollbar,
+#folders_view::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+#files_view::-webkit-scrollbar-track,
+#folders_view::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+#files_view::-webkit-scrollbar-thumb,
+#folders_view::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  border: 2px solid #f8f9fa;
+}
+
+#files_view::-webkit-scrollbar-thumb:hover,
+#folders_view::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7a8ff0 0%, #8a5db8 100%);
+}
+
+/* Close button */
+.cke_skin_kama .cke_dialog_close_button {
+  background: #e74c3c !important;
+  border-radius: 50% !important;
+  width: 32px !important;
+  height: 32px !important;
+  transition: all 0.2s ease !important;
+  opacity: 0.8 !important;
+}
+
+.cke_skin_kama .cke_dialog_close_button:hover {
+  background: #c0392b !important;
+  opacity: 1 !important;
+  transform: scale(1.1) !important;
+}
+
+/* Context menu */
+.cke_skin_kama .cke_panel {
+  background: white !important;
+  border: 1px solid #e1e8ed !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+.cke_skin_kama .cke_menuitem a {
+  padding: 10px 16px !important;
+  transition: all 0.2s ease !important;
+}
+
+.cke_skin_kama .cke_menuitem a:hover {
+  background: linear-gradient(90deg, #f0f7ff 0%, #e6f2ff 100%) !important;
+  color: #667eea !important;
+}
+
+/* View headers */
+.view h2 {
+  padding: 12px 16px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%) !important;
+  border-bottom: 1px solid #e1e8ed !important;
+}
+
+/* Details table */
+#files_view .files_details td {
+  padding: 12px 16px !important;
+  border-bottom: 1px solid #f1f3f5 !important;
+}
+
+#files_view .files_details thead td {
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%) !important;
+  font-weight: 600 !important;
+  color: #495057 !important;
+  border-bottom: 2px solid #e1e8ed !important;
+}
+
+#files_view .files_details tbody tr:hover td {
+  background: #f0f7ff !important;
+}
+
+#files_view .files_details tr.selected td {
+  background: linear-gradient(
+    90deg,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(102, 126, 234, 0.05) 100%
+  ) !important;
+  color: #667eea !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cke_skin_kama .cke_dialog {
+  animation: fadeIn 0.3s ease !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #sidebar_container {
+    width: 180px !important;
+  }
+
+  #files_view .files_thumbnails .file_entry {
+    margin: 8px !important;
+    padding: 12px !important;
+  }
+}

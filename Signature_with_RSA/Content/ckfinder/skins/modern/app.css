@@ -1,0 +1,541 @@
+/*
+Modern CKFinder Skin
+Enhanced modern design with better UX
+*/
+
+/* Reset và Base Styles */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+html,
+body,
+.fake_wrapper,
+#ckfinder {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+}
+
+/* Container chính */
+#ckfinder {
+  color: #2c3e50;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  bottom: 12px;
+  right: 12px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  background: #f8f9fa;
+}
+
+/* Toolbar hiện đại */
+#toolbar_view {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  border-bottom: 1px solid #e1e8ed;
+  padding: 8px 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.cke_skin_kama .cke_toolgroup {
+  background: #ffffff;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 4px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.cke_skin_kama .cke_toolgroup:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Buttons hiện đại */
+.cke_skin_kama .cke_button a,
+.cke_skin_kama .cke_button a.cke_off {
+  border-radius: 6px;
+  padding: 6px 8px;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.cke_skin_kama .cke_button a:hover.cke_off {
+  background: linear-gradient(180deg, #f0f7ff 0%, #e6f2ff 100%);
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.1);
+}
+
+.cke_skin_kama .cke_button a.cke_on {
+  background: linear-gradient(180deg, #667eea 0%, #5568d3 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* Sidebar */
+#sidebar_container {
+  background: #ffffff;
+  border-right: 1px solid #e1e8ed;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.03);
+}
+
+#folders_view {
+  background: #ffffff;
+  padding: 12px 8px;
+}
+
+/* Folder tree hiện đại */
+#folders_view .folder_tree li a {
+  padding: 8px 12px 8px 32px;
+  border-radius: 8px;
+  margin: 2px 0;
+  transition: all 0.2s ease;
+  display: block;
+  color: #2c3e50;
+  background: url("images/ckffolder.gif") 8px center no-repeat;
+}
+
+#folders_view .folder_tree li a:hover {
+  background-color: #f0f7ff;
+  color: #667eea;
+  text-decoration: none;
+  transform: translateX(2px);
+}
+
+#folders_view .folder_tree_wrapper .selection {
+  background: linear-gradient(
+    90deg,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(102, 126, 234, 0.05) 100%
+  );
+  border-left: 3px solid #667eea;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Files view hiện đại */
+#files_view {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+#files_view .files_thumbnails .file_entry {
+  background: #ffffff;
+  border: 1px solid #e1e8ed;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+#files_view .files_thumbnails .file_entry:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.15);
+  border-color: #667eea;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+}
+
+#files_view .files_thumbnails .file_entry.selected {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+#files_view .files_thumbnails .file_entry.selected h5,
+#files_view .files_thumbnails .file_entry.selected .details span {
+  color: white;
+}
+
+#files_view .files_thumbnails .file_entry h5 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 12px;
+  color: #2c3e50;
+}
+
+/* Status bar hiện đại */
+#status_view {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  border-top: 1px solid #e1e8ed;
+  padding: 12px 16px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.03);
+}
+
+#status_view p {
+  font-size: 12px;
+  color: #5a6c7d;
+}
+
+/* Dialog hiện đại */
+.cke_skin_kama .cke_dialog_body {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+}
+
+.cke_skin_kama .cke_dialog_title {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px 12px 0 0;
+  border: none;
+}
+
+.cke_skin_kama .cke_dialog_contents {
+  background: #f8f9fa;
+  border-radius: 0;
+  padding: 24px;
+}
+
+.cke_skin_kama .cke_dialog_footer {
+  background: #ffffff;
+  border-top: 1px solid #e1e8ed;
+  padding: 16px 24px;
+  border-radius: 0 0 12px 12px;
+}
+
+/* Buttons trong dialog */
+.cke_skin_kama a.cke_dialog_ui_button {
+  background: linear-gradient(180deg, #667eea 0%, #5568d3 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.cke_skin_kama a.cke_dialog_ui_button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  background: linear-gradient(180deg, #7a8ff0 0%, #667eea 100%);
+}
+
+.cke_skin_kama a.cke_dialog_ui_button_cancel {
+  background: linear-gradient(180deg, #6c757d 0%, #5a6268 100%);
+}
+
+.cke_skin_kama a.cke_dialog_ui_button_cancel:hover {
+  background: linear-gradient(180deg, #7d8a95 0%, #6c757d 100%);
+}
+
+/* Input fields hiện đại */
+.cke_skin_kama input.cke_dialog_ui_input_text,
+.cke_skin_kama input.cke_dialog_ui_input_password,
+.cke_skin_kama textarea.cke_dialog_ui_input_textarea {
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: all 0.2s ease;
+  font-size: 13px;
+}
+
+.cke_skin_kama input.cke_dialog_ui_input_text:focus,
+.cke_skin_kama input.cke_dialog_ui_input_password:focus,
+.cke_skin_kama textarea.cke_dialog_ui_input_textarea:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
+
+/* Search box hiện đại */
+.cke_skin_kama .cke_search_box input {
+  background: #f8f9fa;
+  border: 2px solid #e1e8ed;
+  border-radius: 20px;
+  padding: 8px 16px 8px 36px;
+  transition: all 0.2s ease;
+}
+
+.cke_skin_kama .cke_search_box input:focus {
+  background: white;
+  border-color: #667eea;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+}
+
+/* Context menu hiện đại */
+.cke_skin_kama .cke_panel {
+  background: white;
+  border: 1px solid #e1e8ed;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.cke_skin_kama .cke_menuitem a {
+  padding: 10px 16px;
+  transition: all 0.2s ease;
+}
+
+.cke_skin_kama .cke_menuitem a:hover {
+  background: linear-gradient(90deg, #f0f7ff 0%, #e6f2ff 100%);
+  color: #667eea;
+}
+
+/* Progress bar hiện đại */
+.ckf_progress_bar_container {
+  background: #e1e8ed;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 8px;
+}
+
+.ckf_progress_bar_container div {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  height: 8px;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+/* Scrollbar hiện đại cho webkit browsers */
+#files_view::-webkit-scrollbar,
+#folders_view::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+#files_view::-webkit-scrollbar-track,
+#folders_view::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+#files_view::-webkit-scrollbar-thumb,
+#folders_view::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  border: 2px solid #f8f9fa;
+}
+
+#files_view::-webkit-scrollbar-thumb:hover,
+#folders_view::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7a8ff0 0%, #8a5db8 100%);
+}
+
+/* Close button hiện đại */
+.cke_skin_kama .cke_dialog_close_button {
+  background: #e74c3c;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  top: 16px;
+  right: 16px;
+  transition: all 0.2s ease;
+  opacity: 0.8;
+}
+
+.cke_skin_kama .cke_dialog_close_button:hover {
+  background: #c0392b;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Tooltips */
+[title] {
+  position: relative;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cke_skin_kama .cke_dialog {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  #sidebar_container {
+    width: 180px !important;
+  }
+
+  #files_view .files_thumbnails .file_entry {
+    margin: 8px;
+    padding: 12px;
+  }
+}
+
+/* Panel widget hiện đại */
+#panel_view .panel_widget {
+  background: white;
+  border: 1px solid #e1e8ed;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin: 12px;
+  overflow: hidden;
+}
+
+#panel_view .panel_widget h2 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Details view table */
+#files_view .files_details td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+#files_view .files_details thead td {
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #e1e8ed;
+}
+
+#files_view .files_details tbody tr:hover td {
+  background: #f0f7ff;
+}
+
+#files_view .files_details tr.selected td {
+  background: linear-gradient(
+    90deg,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(102, 126, 234, 0.05) 100%
+  );
+  color: #667eea;
+}
+
+/* Loading spinner */
+.processing {
+  position: relative;
+}
+
+.processing::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Icons với gradient */
+.cke_skin_kama .cke_button .cke_icon {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* View styles */
+.view {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.view h2 {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 1px solid #e1e8ed;
+}

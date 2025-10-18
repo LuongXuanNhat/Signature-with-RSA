@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKFinder Modern Theme Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.6s ease;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .demo-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .demo-card h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 1px solid #e1e8ed;
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+            border-color: #667eea;
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .feature-card p {
+            color: #5a6c7d;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .icon {
+            font-size: 24px;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .color-box {
+            flex: 1;
+            min-width: 120px;
+            height: 100px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease;
+        }
+
+        .color-box:hover {
+            transform: scale(1.05);
+        }
+
+        .color-label {
+            font-size: 12px;
+            opacity: 0.9;
+            margin-top: 8px;
+        }
+
+        .button-demo {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background: linear-gradient(180deg, #667eea 0%, #5568d3 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(180deg, #6c757d 0%, #5a6268 100%);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+        }
+
+        .btn-outline {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-outline:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .launch-btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .launch-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(102, 126, 234, 0.4);
+        }
+
+        .comparison-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #e1e8ed;
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:hover {
+            background: #f0f7ff;
+        }
+
+        .check {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .times {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding: 20px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 CKFinder Modern Theme</h1>
+            <p>Giao diện hiện đại và đẹp mắt cho CKFinder</p>
+        </div>
+
+        <div class="demo-card">
+            <h2>✨ Tính Năng Nổi Bật</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3><span class="icon">🎨</span> Thiết Kế Hiện Đại</h3>
+                    <p>Gradient đẹp mắt, bo góc mềm mại, shadow tinh tế tạo chiều sâu cho giao diện</p>
+                </div>
+                <div class="feature-card">
+                    <h3><span class="icon">⚡</span> Hiệu Ứng Mượt Mà</h3>
+                    <p>Transitions và animations mượt mà, tạo trải nghiệm người dùng tuyệt vời</p>
+                </div>
+                <div class="feature-card">
+                    <h3><span class="icon">📱</span> Responsive</h3>
+                    <p>Tối ưu hiển thị trên mọi thiết bị từ desktop đến mobile</p>
+                </div>
+                <div class="feature-card">
+                    <h3><span class="icon">🎯</span> UX Tối Ưu</h3>
+                    <p>Cải thiện spacing, typography và màu sắc để dễ sử dụng hơn</p>
+                </div>
+                <div class="feature-card">
+                    <h3><span class="icon">🔧</span> Dễ Tùy Chỉnh</h3>
+                    <p>CSS variables và cấu trúc rõ ràng giúp dễ dàng tùy chỉnh</p>
+                </div>
+                <div class="feature-card">
+                    <h3><span class="icon">🚀</span> Hiệu Năng Cao</h3>
+                    <p>Tối ưu CSS, sử dụng GPU acceleration cho animations</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-card">
+            <h2>🎨 Bảng Màu</h2>
+            <div class="color-palette">
+                <div class="color-box" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <span>Primary</span>
+                    <span class="color-label">#667eea - #764ba2</span>
+                </div>
+                <div class="color-box" style="background: #2c3e50;">
+                    <span>Text</span>
+                    <span class="color-label">#2c3e50</span>
+                </div>
+                <div class="color-box" style="background: #f8f9fa; color: #2c3e50;">
+                    <span>Background</span>
+                    <span class="color-label">#f8f9fa</span>
+                </div>
+                <div class="color-box"
+                    style="background: linear-gradient(90deg, #f0f7ff 0%, #e6f2ff 100%); color: #667eea;">
+                    <span>Hover</span>
+                    <span class="color-label">#f0f7ff</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-card">
+            <h2>🔘 Buttons</h2>
+            <div class="button-demo">
+                <button class="btn btn-primary">Primary Button</button>
+                <button class="btn btn-secondary">Secondary Button</button>
+                <button class="btn btn-outline">Outline Button</button>
+            </div>
+        </div>
+
+        <div class="demo-card">
+            <h2>📊 So Sánh với Kama</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Tính Năng</th>
+                        <th>Kama (Cũ)</th>
+                        <th>Modern (Mới)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Border Radius</td>
+                        <td>3-5px</td>
+                        <td><strong>8-12px</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Shadows</td>
+                        <td>Basic</td>
+                        <td><strong>Multi-layer</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Gradients</td>
+                        <td><span class="times">✗</span> Limited</td>
+                        <td><span class="check">✓</span> Rich gradients</td>
+                    </tr>
+                    <tr>
+                        <td>Animations</td>
+                        <td><span class="times">✗</span> None</td>
+                        <td><span class="check">✓</span> Smooth transitions</td>
+                    </tr>
+                    <tr>
+                        <td>Typography</td>
+                        <td>Arial</td>
+                        <td><strong>System fonts</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Colors</td>
+                        <td>Flat</td>
+                        <td><strong>Gradients</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Hover Effects</td>
+                        <td>Simple</td>
+                        <td><strong>Advanced</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="demo-card" style="text-align: center;">
+            <h2>🚀 Sẵn Sàng Trải Nghiệm?</h2>
+            <p style="color: #5a6c7d; margin: 20px 0;">Giao diện đã được cài đặt và sẵn sàng sử dụng!</p>
+            <a href="ckfinder.html" class="launch-btn">Mở CKFinder</a>
+            <p style="color: #5a6c7d; margin-top: 20px; font-size: 14px;">
+                Hoặc xem file README.md trong thư mục skins/modern/ để biết thêm chi tiết
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>Created with ❤️ using modern CSS techniques</p>
+            <p style="font-size: 14px; margin-top: 8px;">© 2024-2025 Modern CKFinder Theme</p>
+        </div>
+    </div>
+</body>
+
+</html>
